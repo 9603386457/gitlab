@@ -1,0 +1,1349 @@
+Console.Write("What is your name?: ");
+        String strName = Console.ReadLine();
+        Console.WriteLine("Welcome to the C# Tutorial! {0}", strName);
+
+string myInput;
+        int myInt;
+
+        Console.Write ("Please enter a number: ");
+        myInput = Console.ReadLine();
+        myInt = Int32.Parse(myInput);
+
+if (myInt > 10)
+        {
+            Console.WriteLine ("Your number {0} is greater than ten.", myInt);
+        }
+        else if (myInt < 10)
+            Console.WriteLine ("Your number {0} is less than ten.", myInt);
+        else
+            Console.WriteLine ("Your number {0} is equal to ten.",myInt);
+
+bool WorkFromHome = false;
+        byte a = 254;
+        DateTime today;
+if (WorkFromHome) {
+            Console.WriteLine("You opted to work from home");
+        } 
+       else
+            Console.WriteLine("You opted to work from office");
+
+        Console.WriteLine(a);
+        a++;
+        Console.WriteLine(a);
+        a++;
+        Console.WriteLine(a);
+        a++;
+        Console.WriteLine(a);
+        today = DateTime.Now;
+ 
+        System.Console.WriteLine(today);
+        System.Console.WriteLine(today.ToShortDateString());
+        System.Console.WriteLine(today.ToShortTimeString());  
+
+a++          a = a + 1
+
+//output--0 2 4 8
+int iVal= 0;
+        while (iVal < 10)
+        {
+            Console.WriteLine(iVal);
+            iVal = iVal + 2;
+        }
+
+//output 0 1 3...
+int iVal= 0;
+        while (iVal < 10)
+        {
+            Console.WriteLine(iVal);
+            iVal = iVal + 2;
+        }
+
+
+//even no
+int iVal= 12;
+
+            if(iVal%2==0){
+                Console.WriteLine("Even");
+            }
+            else
+            {
+                Console.WriteLine("odd");
+            }
+        
+//ascii value
+String strCompany = "CapGemini";
+            char c = strCompany[0]; 
+            byte bVal = (byte) c;
+            Console.WriteLine(c);
+            Console.WriteLine(bVal);
+
+//uppercase
+String strCompany = "CapGemini";
+        int strLen = strCompany.Length;
+        int iCnt = 0;
+        while (iCnt < strLen)
+        {
+          if ( ((byte) strCompany[iCnt] >= 65) && ((byte) strCompany[iCnt] <= 90) )
+            Console.WriteLine(strCompany[iCnt]);
+            iCnt++;
+
+
+[11:22] Devendra Upadhyay
+    String strText1 = "Test Scripts";
+    String strText2 = "Test Scripts";
+ 
+    //Comparing using CompareTo
+    Console.WriteLine("Checking using CompareTo: " + strText1.CompareTo(strText2).ToString());
+ 
+    //Comparing using Equals
+    Console.WriteLine("Checking using Equals: " + strText1.Equals(strText2).ToString());
+ 
+    //Returning substring
+    Console.WriteLine("Returning first Six characters: " + strText1.Substring(0, 6));
+ 
+    //Returning Index of a character in a string
+    Console.WriteLine("Returning Index of a character in a string: " + strText1.IndexOf("Script"));
+ 
+    //Inserting in a string
+    Console.WriteLine("Inserting in a string: " + strText1.Insert(5,"VB"));
+ 
+    //Replacing characters in a string
+    Console.WriteLine("Replacing characters in a string: " + strText1.Replace('s','x'));
+ 
+    //Removing substring
+    Console.WriteLine("Removing last Six characters: " + strText1.Remove(5,6));
+
+// prog
+using System;
+
+namespace MyFirstProject
+{
+    class Program
+    {
+        public enum Grade
+        {
+              Outstanding, 
+              Excellent, 
+              VeryGood, 
+              Good, 
+              Satisfactory
+            }
+         
+            static void Main()
+            {
+              Grade GradeVal = Grade.VeryGood;
+              Console.WriteLine(GradeVal);
+    }
+  }
+}
+
+
+//
+class Program
+    {
+	public enum Grade
+    {
+      Outstanding, 
+      Excellent, 
+      VeryGood, 
+      Good, 
+      Satisfactory
+    }
+	static bool WorkFromHome = true;
+ 
+        static void Main(string[] args)
+        {
+      enumExmaple();
+      boolExmaple();
+        }
+ 
+    static void enumExmaple()
+    {
+      Grade GradeVal = Grade.Excellent;
+      Console.WriteLine(GradeVal);
+    }
+ 
+    static void boolExmaple()
+    {
+          if (WorkFromHome) 
+          {
+                Console.WriteLine("You opted to work from home {0}");
+          }
+          else
+            Console.WriteLine("You opted to work from office");
+    }
+
+
+
+//
+string strCompany="CapGemini";
+    int strLen=strCompany.Length;
+    int iCnt=0;
+    while(iCnt<StrLen)
+    {
+      if(((byte)strCompany[iCnt]>=65)&&((byte) strCompany[iCnt]<=90))
+      Console.WriteLine(strCompany[iCnt]);
+      iCnt++;
+    }
+    static void printCaps(String strCompany)
+    {
+      for (int iCnt = 0; iCnt < strCompany.Length; iCnt++)
+      {
+      if ( ((byte) strCompany[iCnt] >= 65) && ((byte) strCompany[iCnt] <= 90) )
+        Console.WriteLine(strCompany[iCnt]);
+      }
+    }
+    for (int i = 0; i <= 9; i++)
+    Console.WriteLine(i);
+
+
+static void printCapLetters(String strCompany)
+    {
+      foreach (char c in strCompany)
+      {
+      if ( ((byte) c >= 65) && ((byte) c <= 90) )
+        Console.WriteLine(c);
+      }
+    }
+
+
+// arrays
+int[] myInts = {5, 10, 15};
+        Console.WriteLine ("myInts[0]: {0}, myInts[1]: {1}, myInts[2]: {2}", myInts[0], myInts[1], myInts[2]);
+
+bool[][] myBools = new bool[2][]; // jagged array definition
+
+ 
+
+        myBools[0] = new bool[2];        
+        myBools[1] = new bool[1];        
+
+ 
+
+        myBools[0][0] = true;
+        myBools[0][1] = false;
+        myBools[1][0] = true;
+        Console.WriteLine ("myBools[0][0]: {0}, myBools[1][0]: {1}", myBools[0][0],  myBools[1][0]);
+
+
+//
+	double[,] myDoubles = new double[2, 2];        
+        myDoubles[0,0] = 3.17;
+        myDoubles[0,1] = 7.157;
+        myDoubles[1,1] = 2.117;
+        myDoubles[1,0] = 556.00138917;
+        Console.WriteLine ("myDoubles[0,0]: {0}, myDoubles[1,0]: {1}", myDoubles[0,0], myDoubles[1,0]);
+ 
+        string[] myStrings = new string[3];            
+        myStrings[0] = "Joe";
+        myStrings[1] = "Matt";
+        myStrings[2] = "Robert";
+        Console.WriteLine ("myStrings[0]: {0}, myStrings[1]: {1}, myStrings[2] {2}", myStrings[0], myStrings[1], myStrings[2]);
+
+
+//three dimensional
+        int[,,] array3D = new int[,,] { { { 1, 2, 3 }, { 4, 5, 6 } }, { { 7, 8, 9 }, { 10, 11, 12 } } };
+        //Console.WriteLine ("array3D[1,0,1]: {0} ", array3D[1,0,1]);
+        Console.WriteLine ("array3D[0,0,0]: {0}, array3D[0,0,1]: {1}, array3D[0,1,2] {2}", array3D[0,0,0], array3D[0,0,1], array3D[0,1,2]);
+
+String strCompany = "CapGemini";
+        Console.WriteLine($"My orgnaization name is {strCompany} ");
+        //Console.WriteLine("My orgnaization name is {0} ",strCompany);
+
+
+EmpDetailsArr            EmpSalaryArr
+        EmpCode                EmpCode
+        EmpName                Basic
+        ContactNo              DA
+                               HRA
+                               GrossSalary
+                               TDS
+                               NetSalary
+
+EmpCode        EmpName        ContactNo
+        101        Prathyusa    282828
+        102        Reshma        3992929
+        892        Pradipta    9928282822
+        320
+        817
+
+ 
+
+ 
+
+        Basic    DA    HRA    TDS        
+        GrossSalary    = Basic    + DA + HRA
+        NetSalary    = GrossSalary - TDS
+
+ 
+
+    1. Modular approach
+    2. Mutil dimensional array
+    3. One method one task
+    4. Method to print 
+
+
+
+    using System;
+namespace MyFirstProject
+{
+    class Program
+  {
+   static string[,] EmpDetails = new string[5,3];
+    static     int [,] EmpSalary = new int[5,7];
+    public static void Main(string[] args)
+        {
+       input();
+  }
+  public static void input(){
+      //Console.WriteLine("Enter how many employess data you want to store");
+       //  int a=Int32.Parse(Console.ReadLine());
+    for(int i=0;i<1;i++){
+      Console.WriteLine("enter emp code");
+      EmpDetails[i,0]=Console.ReadLine();
+      Console.WriteLine("enter empname");
+      EmpDetails[i,1]=Console.ReadLine();
+      Console.WriteLine("enter contact number");
+      EmpDetails[i,2]=Console.ReadLine();
+      EmpSalary[i,0]=Int32.Parse(EmpDetails[i,0]);
+      Console.WriteLine("Enter basics");
+      EmpSalary[i,1]=Int32.Parse(Console.ReadLine());
+      Console.WriteLine("enter da");
+      EmpSalary[i,2]=Int32.Parse(Console.ReadLine());
+        Console.WriteLine("enter hra");
+          EmpSalary[i,3]=Int32.Parse(Console.ReadLine());
+          Console.WriteLine("enter tds");
+          EmpSalary[i,4]=Int32.Parse(Console.ReadLine());
+           Console.WriteLine("gross salary is");
+           EmpSalary[i,5]=getGrossSalary(EmpSalary[i,1],EmpSalary[i,2],EmpSalary[i,3]);
+           int d=EmpSalary[i,5];
+          Console.WriteLine(EmpSalary[i,5]);
+          Console.WriteLine("NET SALARY IS");
+          EmpSalary[i,6]=getNetSalary(EmpSalary[i,4], d);
+          Console.WriteLine(EmpSalary[i,6]);
+    } }
+    public static int getGrossSalary(int basics,int daa,int hraa){
+      return (basics+daa+hraa);
+    }
+    public static int getNetSalary(int tds,int d){
+      return ( tds-d);
+    }
+  }
+   }
+
+
+//
+
+    void PrintDetailsByID()
+    {
+      int ndx = GetIndxForID();
+      if (ndx == -1)
+        Console.WriteLine("Invalid Code...please try again");
+      else
+        PrintDetails(ndx);
+    }
+ 
+    int GetIndxForID()
+    {
+      Console.WriteLine("Enter Emp Code");
+      String EmpCode = Console.ReadLine();
+ 
+      int indx = -1;
+      continue = true;
+      while (continue && (indx < EmpDetailsArr.Length))
+        {
+        indx++; 
+        if ( (EmpCode.Equals(EmpDetailsArr(indx, 0)))
+            continue = false;
+        }
+      return (continue ? -1 : indx); 
+    }
+ 
+    void PrintDetails(int indx)
+    {
+    }
+
+// constructor
+public static void Main() 
+    {
+        OutputClass outClDef = new OutputClass(); // default constructor
+        OutputClass outClStr = new OutputClass("Re-initialized"); // overloaded constructor
+        OutputClass outClInt = new OutputClass(200); // overloaded constructor
+        OutputClass outClStrInt = new OutputClass("Initialized again", 300); // overloaded constructor
+
+ 
+    Console.WriteLine("From Default Constructor");
+    outClDef.printString();
+    Console.WriteLine(outClDef.getString());
+    Console.WriteLine(outClDef.getInt());
+
+    Console.WriteLine("From overloaded Constructor - String");
+    outClStr.printString();
+    Console.WriteLine(outClStr.getString());
+    Console.WriteLine(outClStr.getInt());
+
+    Console.WriteLine("From overloaded Constructor - Int");
+    outClInt.printString();
+    Console.WriteLine(outClInt.getString());
+    Console.WriteLine(outClInt.getInt());
+
+
+    Console.WriteLine("From overloaded Constructor - String & Int");
+    outClStrInt.printString();
+    Console.WriteLine(outClStrInt.getString());
+    Console.WriteLine(outClStrInt.getInt());
+}
+
+//inheritance
+
+using System;
+
+namespace MyFirstProject
+{
+public class Parent
+{
+    string parentString;
+    //string myString;
+    public Parent()
+    {
+        Console.WriteLine("Parent Constructor.");
+    }
+       public Parent(string myString)
+    {
+        parentString = myString;
+        //this.myString = myString;
+        Console.WriteLine(parentString);
+    }
+    public void print()
+    {
+        Console.WriteLine("I'm a Parent Class.");
+    }
+}
+public class Child : Parent
+{
+    public Child() : base("From Derived")
+    {
+        Console.WriteLine("Child Constructor.");
+    }
+    public new void print()
+    {
+        base.print();
+        Console.WriteLine("I'm a Child Class.");
+    }
+   public static void Main()
+    {
+        Child child = new Child();
+        child.print();
+        ((Parent)child).print();
+    }
+}
+    }
+
+
+// abstract
+
+using System;
+
+ 
+
+// Top most level
+public abstract class BaseC  
+{  
+    public void Method1(string msg)   
+    {  
+        Console.WriteLine(msg);  
+    }  
+
+    public abstract void MethodAbs();
+
+ 
+
+    public virtual void MethodImpl(string msg)   
+    {  
+        Console.WriteLine(msg);  
+    }  
+}  
+
+ 
+
+// Level 2
+public abstract class Interim : BaseC
+{  
+    public void Method2(string msg)   
+    {  
+        Console.WriteLine(msg);  
+    }  
+
+    public abstract void MethodAbs2();
+
+ 
+    public virtual void MethodImpl2(string msg)   
+    {  
+        Console.WriteLine(msg);  
+    }
+
+  public override void MethodAbs()
+  {
+    Console.WriteLine("implementing abstract method - in Interim");
+  }
+}
+
+// Level 3 with Main method
+public class TestDerived : Interim 
+{  
+  public static void Main()
+  {
+    TestDerived obj = new TestDerived();
+    obj.Method1("Message 1");
+    obj.MethodAbs();
+    obj.MethodImpl("Implemented by overriding");
+
+
+    obj.Method2("Message 2");
+    obj.MethodAbs2();
+    obj.MethodImpl2("Implemented by overriding - MethodImpl2");
+  }
+
+  public override void MethodAbs2()
+  {
+    Console.WriteLine("implementing abstract method");
+  }
+  public override void MethodAbs()
+  {
+    Console.WriteLine("implementing abstract method 1");
+  }
+  public override void MethodImpl(string msg)   
+  {  
+      Console.WriteLine(msg);
+  }  
+public override void MethodImpl2(string msg)   
+  {  
+      Console.WriteLine(msg);
+  }  
+} 
+
+//  override
+
+using System;
+public abstract class BaseC  
+{  
+    public virtual void Begin(string msg)   
+    {  
+        Console.WriteLine("Base: " + msg);  
+    }  
+
+    public virtual void End()  
+    {  
+        Console.WriteLine("Completed - Base");  
+    }  
+} 
+ 
+
+public class DerivedC : BaseC  
+{  
+    public override void Begin(string msg)   
+    {  
+        Console.WriteLine("Derived : " + msg);  
+    }  
+
+    public new void End() 
+    {  
+    //base.Begin("Calling Base: ");
+        Console.WriteLine("Completed - Derived"); 
+    }  
+}
+
+ 
+public class TestOverrideShadow  
+{  
+  public static void Main()
+  {
+      BaseC overrides = new DerivedC(); // overriding Base, hence only methods that are Derived are available 
+    DerivedC shadows = new DerivedC(); // hiding, hence both the methods are available from Base and Derived
+
+        overrides.Begin("Begin Test ");  
+        overrides.End();  
+
+        shadows.Begin("Begin Test ");  
+        shadows.End();  
+  }
+} 
+
+//public class Customer
+{
+    // Auto-implemented properties for trivial get and set
+    public double TotalPurchases { get; set; }
+    public string Name { get; set; }
+    public int CustomerId { get; set; }
+
+
+    // Constructor
+    public Customer(double purchases, string name, int id)
+    {
+        TotalPurchases = purchases;
+        Name = name;
+        CustomerId = id;
+    }
+
+    // Methods
+    public string GetContactInfo() { return "ContactInfo"; }
+    public string GetTransactionHistory() { return "History"; }
+
+
+    // .. Additional methods, events, etc.
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Initialize a new object.
+        Customer cust1 = new Customer(4987.63, "Northwind", 90108);
+
+        // Modify a property.
+        cust1.TotalPurchases += 499.99;
+    }
+}
+
+//collections
+using System;
+using System.Collections;
+
+public class SamplesArrayList  {
+
+   public static void Main()  {
+
+      // Creates and initializes a new ArrayList.
+      ArrayList myAL = new ArrayList();
+
+      // myAL.Add(new String("Hello"));
+      myAL.Add("Hello");
+      myAL.Add("World");
+      myAL.Add("!");
+
+      // Displays the properties and values of the ArrayList.
+      Console.WriteLine( "myAL" );
+      Console.WriteLine( "    Count:    {0}", myAL.Count );
+      Console.WriteLine( "    Capacity: {0}", myAL.Capacity );
+      Console.Write( "    Values:" );
+      PrintValues( myAL );
+   }
+
+   public static void PrintValues( IEnumerable myList )  {
+      foreach ( Object obj in myList )
+         Console.Write( "   {0}", obj );
+      Console.WriteLine();
+   }
+}
+
+//2
+using System;
+using System.Collections;
+ 
+public class SamplesArrayList  {
+ 
+   public static void Main()  {
+ 
+      ArrayList myAL = new ArrayList();
+ 
+      myAL.Add("Hello");
+      myAL.Add(new Emp {EmpID = 101, EmpName = "Vijay" }); 
+      myAL.Add(new Cat {Age = 2, Name = "Dicky" });
+ 
+      PrintValues( myAL );
+   }
+ 
+   public static void PrintValues( IEnumerable myList )  {
+       /*
+      foreach ( Object obj in myList )
+         Console.Write( "   {0}", ((obj.GetType)obj).EmpName );    
+      Console.WriteLine();
+      */
+ 
+      /*
+      foreach ( Object obj in myList )
+       {
+         Console.WriteLine("Printing Type: " + obj.GetType().ToString());
+         switch(obj.GetType().ToString())
+           {
+              case "System.String":
+              Console.WriteLine( "   {0}", obj);
+              break;
+              case "Emp":
+              Console.WriteLine( "   {0}", ((Emp)obj).EmpName );
+              break;
+              default:
+              Console.WriteLine("Unrecognized" );
+              break;
+           }
+       }
+    */
+   }
+ 
+}
+ 
+class Emp
+{
+    public int EmpID {get; set;}
+    public String EmpName {get; set;}
+}
+public class Cat
+{
+    public int Age { get; set; }
+    public string Name { get; set; }
+}
+
+//3
+using System;
+using System.Collections.Generic;
+ 
+// Simple business object. A PartId is used to identify the type of part but the part name can change.
+public class Part : IEquatable<Part>
+    {
+        public string PartName { get; set; }
+ 
+        public int PartId { get; set; }
+ 
+        public override string ToString()
+        {
+            return "ID: " + PartId + "   Name: " + PartName;
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            Part objAsPart = obj as Part;
+            if (objAsPart == null) return false;
+            else return Equals(objAsPart);
+        }
+        public override int GetHashCode()
+        {
+            return PartId;
+        }
+        public bool Equals(Part other)
+        {
+            if (other == null) return false;
+            return (this.PartId.Equals(other.PartId));
+      //  return (other == null ? false : this.PartId.Equals(other.PartId));
+        }
+    // Should also override == and != operators.
+    }
+public class Example
+{
+    public static void Main()
+    {
+        // Create a list of parts.
+        List<Part> parts = new List<Part>();        //      List<T>  
+ 
+        // Add parts to the list.
+        parts.Add(new Part() { PartName = "crank arm", PartId = 1234 });
+        parts.Add(new Part() { PartName = "chain ring", PartId = 1334 });
+        parts.Add(new Part() { PartName = "regular seat", PartId = 1434 });
+        parts.Add(new Part() { PartName = "banana seat", PartId = 1444 });
+        parts.Add(new Part() { PartName = "cassette", PartId = 1534 });
+        parts.Add(new Part() { PartName = "shift lever", PartId = 1634 });
+ 
+        // Write out the parts in the list. This will call the overridden ToString method in the Part class.
+        Console.WriteLine();
+        foreach (Part aPart in parts)
+        {
+            Console.WriteLine(aPart);
+        }
+ 
+        // Check the list for part #1734. This calls the IEquatable.Equals method of the Part class, which checks the PartId for equality.
+        Console.WriteLine("\nContains(\"1734\"): {0}", parts.Contains(new Part { PartId = 1734, PartName = "" }));
+ 
+        // Insert a new item at position 2.
+        Console.WriteLine("\nInsert(2, \"1834\")");
+        parts.Insert(2, new Part() { PartName = "brake lever", PartId = 1834 });
+ 
+        //Console.WriteLine();
+        foreach (Part aPart in parts)
+        {
+            Console.WriteLine(aPart);
+        }
+ 
+        Console.WriteLine("\nParts[3]: {0}", parts[3]);
+ 
+        Console.WriteLine("\nRemove(\"1534\")");
+ 
+        // This will remove part 1534 even though the PartName is different, because the Equals method only checks PartId for equality.
+        parts.Remove(new Part() { PartId = 1534, PartName = "cogs" });
+ 
+        Console.WriteLine();
+        foreach (Part aPart in parts)
+        {
+            Console.WriteLine(aPart);
+        }
+ 
+        Console.WriteLine("\nRemoveAt(3)");
+        // This will remove the part at index 3.
+        parts.RemoveAt(3);
+ 
+        Console.WriteLine();
+        foreach (Part aPart in parts)
+        {
+            Console.WriteLine(aPart);
+        }
+ 
+    }
+}
+
+//
+using System;
+using System.Collections.Generic;
+
+public class Technology
+{
+    public string Name { get; set; }
+    public int DemandQuotient { get; set; }
+}
+
+    // the get accessor (or iterator method) in the iterator navigates through the iterator...it performs the custom iteration over the collection.
+    public class Technologies
+    {
+        public System.Collections.Generic.IEnumerable<Technology> NextTechnology   // iterator
+        {
+            get   // accessor method of iterator
+            {
+            yield return new Technology { Name="C#", DemandQuotient=4 };
+                yield return new Technology { Name="Python", DemandQuotient=2 };
+                yield return new Technology { Name="R", DemandQuotient=3 };
+                yield return new Technology { Name="Java", DemandQuotient=4 };
+            }
+        }
+    }
+
+ 
+public class ListExample
+{
+  // Collection Initializer
+  static List<int> numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+ 
+
+  // Collection Initializer
+  static List<Technology> TechnologyList = new List<Technology>
+        {
+            new Technology() { Name="C#", DemandQuotient=40},
+            new Technology() { Name="Python", DemandQuotient=25},
+            new Technology() { Name="R", DemandQuotient=30},
+            new Technology() { Name="Java", DemandQuotient=40}
+        };
+
+
+  public static void Main()
+  {
+    // A lambda expression is placed in the ForEach method
+    numbers.ForEach( number => Console.WriteLine(number + " "));
+
+
+    TechnologyList.ForEach( x => Console.WriteLine(x.Name + " " + x.DemandQuotient.ToString()));
+
+    // iterator using yield return
+    ShowTechnologies();
+    Console.WriteLine("Printing...");
+    ShowTechnologies(40);
+  }
+
+    // implements Iterator to use yeild return
+    public static void ShowTechnologies()
+    {
+        var v_TechnologyList = new Technologies();
+        foreach (Technology objTechnology in v_TechnologyList.NextTechnology)
+        {
+            Console.WriteLine(objTechnology.Name + " " + objTechnology.DemandQuotient.ToString());
+        }
+    }
+
+
+    public static void ShowTechnologies(int iDemandQ)
+    {
+        foreach (Technology objTechnology in TechnologyList.FindAll(x => x.DemandQuotient == iDemandQ))
+        {
+            Console.WriteLine(objTechnology.Name + " " + objTechnology.DemandQuotient.ToString());
+        }
+    }
+}
+
+//
+using System;
+
+class CompareGenericClass < T > {  
+    public bool Compare(T x, T y) {  
+        if (x.Equals(y)) 
+       return true;  
+        else 
+       return false;  
+    }  
+}
+
+class Program {  
+    static void Main(string[] args) {  
+        CompareGenericClass < string > Ocompare = new CompareGenericClass < string > ();  
+        bool stringResult = Ocompare.Compare("Hey There", "Hey There");  
+        Console.WriteLine("Generic string comapre result:" + stringResult);  
+
+        CompareGenericClass < int > oIntcompare = new CompareGenericClass < int > ();  
+        bool integerresult = oIntcompare.Compare(15, 16);  
+        Console.WriteLine("Generic int comapre result:" + integerresult);  
+    }  
+}
+
+//delegate
+
+using System;
+
+// this is the delegate declaration
+public delegate int Comparer(object obj1, object obj2);
+
+public class Name
+{
+    public string FirstName = null;
+    public string LastName = null;
+
+    public Name(string first, string last)
+    {
+        FirstName = first;
+        LastName = last;
+    }
+
+    // this is the delegate method handler
+    public static int CompareFirstNames(object name1, object name2)
+    {
+        string n1 = ((Name)name1).FirstName;
+        string n2 = ((Name)name2).FirstName;
+
+        if (String.Compare(n1, n2) > 0)
+        {
+            return 1;
+        }
+        else if (String.Compare(n1, n2) < 0)
+        {
+            return -1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public override string ToString()
+    {
+        return FirstName + " " + LastName;
+    }
+} 
+
+class SimpleDelegate
+{
+    Name[] names = new Name[5];
+
+    public SimpleDelegate()
+    {
+        names[0] = new Name("Joe", "Mayo");
+        names[1] = new Name("John", "Hancock");
+        names[2] = new Name("Jane", "Doe");
+        names[3] = new Name("John", "Doe");
+        names[4] = new Name("Jack", "Smith");
+    }
+
+    static void Main(string[] args)
+    {
+        SimpleDelegate sd = new SimpleDelegate();
+
+        // this is the delegate instantiation
+        Comparer cmp = new Comparer(Name.CompareFirstNames);
+
+        Console.WriteLine("\nBefore Sort: \n");
+
+         sd.PrintNames();
+
+        // observe the delegate argument
+        sd.Sort(cmp);
+
+        Console.WriteLine("\nAfter Sort: \n");
+
+        sd.PrintNames();
+    }
+
+    // observe  the delegate parameter
+    public void Sort(Comparer compare)
+    {
+        object temp;
+
+        for (int i=0; i < names.Length; i++)
+        {
+            for (int j=i; j < names.Length; j++)
+            {
+                // using delegate "compare" just like
+                // a normal method
+                if ( compare(names[i], names[j]) > 0 )
+                {
+                    temp = names[i];
+                    names[i] = names[j];
+                    names[j] = (Name)temp;
+                }
+            }
+        }
+    }
+
+ 
+    public void PrintNames()
+    {
+        Console.WriteLine("Names: \n");
+
+ 
+        foreach (Name name in names)
+        {
+            Console.WriteLine(name.ToString());
+        }
+    }
+}
+
+// delegates vth lambda
+
+using System;
+
+public delegate void MyDelegate(string msg); //declaring a delegate
+public delegate void MyDelegate1(); //declaring a delegate
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        MyDelegate del = ClassA.MethodA;  
+        del("Hello World");
+
+        del = ClassB.MethodB;
+        del("Hello World");
+
+        del = (string msg) => Console.WriteLine("Called lambda expression: " + msg);
+        del("Hello World");
+
+        MyDelegate1 del1 = () => Console.WriteLine("Called lambda expression: without any parameter");
+        del1();
+ 
+
+        MyDelegate del2 = delegate(string msg) { 
+            Console.WriteLine("Inside Anonymous method. Value: " + msg); 
+        };
+        del2("Anonymous method");
+
+       Nullable<int> i = null;
+
+
+        if (i.HasValue)
+            Console.WriteLine(i.Value); // or Console.WriteLine(i)
+        else
+            Console.WriteLine("Null");
+
+    }
+}
+
+class ClassA
+{
+    public static void MethodA(string message)
+    {
+        Console.WriteLine("Called ClassA.MethodA() with parameter: " + message);
+    }
+}
+
+class ClassB
+{
+    public static void MethodB(string message)
+    {
+        Console.WriteLine("Called ClassB.MethodB() with parameter: " + message);
+    }
+}
+
+//4
+using System;
+using System.Collections;
+
+    // Describes a book in the book list:
+    public struct Book
+    {
+        public string Title;        // Title of the book.
+        public string Author;       // Author of the book.
+        public decimal Price;       // Price of the book.
+        public bool Paperback;      // Is it paperback?
+
+        public Book(string title, string author, decimal price, bool paperBack)
+        {
+            Title = title;
+            Author = author;
+            Price = price;
+            Paperback = paperBack;
+        }
+    }
+    // Declare a delegate type for processing a book:
+    public delegate void ProcessBookDelegate(Book book);
+
+    // Maintains a book database.
+    public class BookDB
+    {
+        // List of all books in the database:
+        ArrayList list = new ArrayList();
+
+        // Add a book to the database:
+        public void AddBook(string title, string author, decimal price, bool paperBack)
+        {
+            list.Add(new Book(title, author, price, paperBack));
+        }
+        // Call a passed-in delegate on each paperback book to process it: 
+        public void ProcessPaperbackBooks(ProcessBookDelegate processBook)
+        {
+            foreach (Book b in list)
+            {
+                if (b.Paperback)
+                    // Calling the delegate:
+                    processBook(b);
+            }
+        }
+    }
+       //using Bookstore;
+
+   // Class to total and average prices of books:
+   class PriceTotaller
+   {
+      int countBooks = 0;
+      decimal priceBooks = 0.0m;
+
+      internal void AddBookToTotal(Book book)
+      {
+         countBooks += 1;
+         priceBooks += book.Price;
+      }
+      internal decimal AveragePrice()
+      {
+         return priceBooks / countBooks;
+      }
+   }
+
+   // Class to test the book database:
+   class Test
+   {
+      // Print the title of the book.
+      static void PrintTitle(Book b)
+      {
+         Console.WriteLine("   {0}", b.Title);
+      }
+      // Execution starts here.
+      static void Main()
+      {
+         BookDB bookDB = new BookDB();
+
+         // Initialize the database with some books:
+         AddBooks(bookDB);      
+
+          // Print all the titles of paperbacks:
+         Console.WriteLine("Paperback Book Titles:");
+
+         // Create a new delegate object associated with the static 
+         // method Test.PrintTitle:
+
+         bookDB.ProcessPaperbackBooks(new ProcessBookDelegate(PrintTitle));
+
+         // Get the average price of a paperback by using
+         // a PriceTotaller object:
+
+         PriceTotaller totaller = new PriceTotaller();
+
+         // Create a new delegate object associated with the nonstatic 
+         // method AddBookToTotal on the object totaller:
+
+         bookDB.ProcessPaperbackBooks(new ProcessBookDelegate(totaller.AddBookToTotal));
+
+         Console.WriteLine("Average Paperback Book Price: ${0:#.##}", totaller.AveragePrice());
+         Console.ReadKey();
+      }
+      // Initialize the book database with some test books:
+      static void AddBooks(BookDB bookDB)
+      {
+         bookDB.AddBook("The C Programming Language", "Brian W. Kernighan and Dennis M. Ritchie", 19.95m, true);
+         bookDB.AddBook("The Unicode Standard 2.0", "The Unicode Consortium", 39.95m, true);
+         bookDB.AddBook("The MS-DOS Encyclopedia", "Ray Duncan", 129.95m, false);
+         bookDB.AddBook("Dogbert's Clues for the Clueless", "Scott Adams", 12.00m, true);
+      }
+   }
+
+
+
+//5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace MultiCastDelegates
+{
+    //Subscribers
+    public class SendViaMobile
+    {
+        public void sendMessage(string msg)
+        {
+            Console.WriteLine("Send to Mobile "+msg);
+        }
+    }
+    public class SendViaEmail
+    {
+        public void sendEmail(string msg)
+        {
+            Console.WriteLine("Send to EMail "+msg);
+        }
+    }
+    //Publisher
+    public class Publisher
+    {
+        //Declare Delegate
+        public delegate void PublishMessageDel(string msg);
+
+        //Define Delegate
+        public PublishMessageDel publishmsg = null;
+        public void PublishMessage(string message)
+        { 
+            //Invoke Delegate
+            publishmsg.Invoke(message);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Publisher publisher = new Publisher();
+            SendViaEmail SE = new SendViaEmail();
+            SendViaMobile SM = new SendViaMobile();
+            publisher.publishmsg = SE.sendEmail;
+            publisher.publishmsg -= SM.sendMessage;
+            publisher.PublishMessage("Hello You Have received New Notification");
+            Console.ReadLine();
+        }
+    }
+}
+
+//6
+
+using System;
+using System.IO;
+using System.Text;
+
+ 
+
+namespace FileIOApplication {
+   class Program {
+      static void Main(string[] args) {
+
+ 
+
+          //FileIO();
+
+ 
+
+          FileWriteLine();
+
+ 
+
+          FileReadLineByLine();
+
+ 
+
+          FileReadAllLines();
+
+ 
+
+          FileCopy();
+
+          FileDelete();
+
+      }
+
+ 
+
+
+    private static void FileIO()
+       {
+         FileStream F = new FileStream(@"D:\Sample\test2.dat", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+         for (int i = 1; i <= 20; i++) {
+            F.WriteByte((byte)i);
+         }
+         F.Position = 0;
+         for (int i = 0; i <= 20; i++) {
+            Console.Write(F.ReadByte() + " ");
+         }
+         F.Close();
+         Console.ReadKey();
+       }
+
+ 
+
+    private static void FileWriteLine()
+       {
+         StreamWriter F = new StreamWriter(@"D:\Sample\test.dat", true, Encoding.ASCII);
+         for (int i = 1; i <= 20; i++) {
+            F.WriteLine("This is an example");
+         }
+         F.Close();
+       }
+
+ 
+
+    private static void FileReadLineByLine()
+       {
+         StreamReader F = new StreamReader(@"D:\Sample\test.dat");
+         String a_line;
+         a_line = F.ReadLine();
+         Console.WriteLine("\n Printing Line by Line \n");
+        while (a_line != null) 
+        {
+            Console.WriteLine(a_line);
+            a_line = F.ReadLine();
+        }
+        F.Close();
+         Console.ReadKey();
+       }
+
+    private static void FileReadAllLines()
+       {
+         String all_lines;
+         all_lines = File.ReadAllText(@"D:\Sample\test.dat");
+        Console.WriteLine(" \n Printing all lines \n" + all_lines);
+       }
+
+ 
+
+    private static void FileCopy()
+       {
+        File.Copy(@"D:\Sample\test.dat", @"D:\Sample\test1.dat");
+        Console.WriteLine("Copied");
+       }
+
+ 
+
+       private static void FileDelete()
+       {
+        File.Delete(@"D:\Sample\test1.dat");
+        Console.WriteLine("Deleted");
+       }
+}
+}
+
+//exception
+
+/*using System;
+class Program
+{
+    static void Main()
+    {
+        int[] arr={1,2,3,4};
+        try{
+            for(int i=0;i<arr.Length;i++){
+                Console.WriteLine(arr[i]/arr[i+1]);
+                }
+            }
+        catch(IndexOutOfRange a ){
+            Console.WriteLine("An exception has occured:{0}",a.Message);
+        }
+        catch(DivideByZeroException a){
+            Console.WriteLine("An ecxception occured:{0}",a.Message);
+        }
+        }
+    }*/
